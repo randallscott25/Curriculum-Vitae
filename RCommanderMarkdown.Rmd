@@ -1,0 +1,101 @@
+<!-- R Commander Markdown Template -->
+
+Replace with Main Title
+=======================
+
+### Your Name
+
+### `r as.character(Sys.Date())`
+
+```{r echo=FALSE}
+# include this code chunk as-is to set options
+knitr::opts_chunk$set(comment=NA, prompt=TRUE, out.width=750, fig.height=8, fig.width=8)
+library(Rcmdr)
+library(car)
+library(RcmdrMisc)
+```
+
+
+```{r echo=FALSE}
+# include this code chunk as-is to enable 3D graphs
+library(rgl)
+knitr::knit_hooks$set(webgl = hook_webgl)
+```
+
+```{r}
+local({
+  .Table <- with(mean_clean, table(Strata_Determining_Factors))
+  cat("\ncounts:\n")
+  print(.Table)
+  cat("\npercentages:\n")
+  print(round(100*.Table/sum(.Table), 2))
+  .Probs <- c(0.25,0.25,0.25,0.25) 
+  chisq.test(.Table, p=.Probs)
+})
+```
+
+```{r}
+scatterplot(D_Wh_Cancer~Poverty | CHSI_State_Name, regLine=FALSE, 
+  smooth=FALSE, boxplots=FALSE, by.groups=TRUE, data=mean_clean)
+```
+
+```{r}
+scatterplot(D_Wh_Cancer~Smoker, regLine=FALSE, smooth=FALSE, boxplots=FALSE,
+   data=mean_clean)
+```
+
+```{r}
+local({
+  .x <- seq(-3.291, 3.291, length.out=1000)  
+  plotDistr(.x, dnorm(.x, mean=0, sd=1), cdf=FALSE, xlab="x", 
+  ylab="Density", 
+  main=paste("Normal Distribution:  Mean=0, Standard deviation=1"))
+})
+```
+
+```{r}
+AggregatedData<- aggregate(D_Wh_Cancer ~ CHSI_State_Name, data=mean_clean, 
+  FUN=sum)
+```
+
+```{r}
+summary(AggregatedData)
+```
+
+
+```{r}
+with(AggregatedData, tapply(D_Wh_Cancer, list(CHSI_State_Name), mean, 
+  na.rm=TRUE))
+```
+
+```{r}
+library(colorspace, pos=21)
+```
+
+
+```{r}
+RegModeldepression.2 <- 
+  lm(Major_Depression~No_HS_Diploma+Recent_Drug_Use+Sev_Work_Disabled+Unemployed,
+   data=vulnpopsandenvhealth)
+```
+
+
+```{r}
+summary(RegModeldepression.2)
+```
+
+
+```{r}
+library(MASS, pos=22)
+```
+
+
+```{r}
+Confint(RegModeldepression.2, level=0.95)
+```
+
+```{r}
+scatterplot(Recent_Drug_Use~Sev_Work_Disabled, regLine=FALSE, smooth=FALSE, 
+  boxplots=FALSE, data=vulnpopsandenvhealth)
+```
+

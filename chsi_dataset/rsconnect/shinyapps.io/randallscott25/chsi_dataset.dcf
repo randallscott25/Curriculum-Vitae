@@ -1,0 +1,13 @@
+name: chsi_dataset
+title: chsi_dataset
+username:
+account: randallscott25
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 1176248
+bundleId: 2407010
+url: https://randallscott25.shinyapps.io/chsi_dataset/
+when: 1568221376.19864
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: .RData|1.R|3dPlotSuicideUnemployedNoinsureance.png|ALE ~ correlating risk factors.pdf|anovaSuicide.png|black american histogram suicide.png|CHSI DataSet.xls|combined.csv|correlation plot first run Suicide - risk factors.png|Correlations to ALE.pdf|CSV File Index.txt|DATAELEMENTDESCRIPTION(AutoRecovered).csv|DATAELEMENTDESCRIPTION.csv|DEFINEDDATAVALUE.csv|DEMOGRAPHICS.csv|HEALTHYPEOPLE2010.csv|Histogram Suicide, HIspanic Americans 15 - 24.png|LEADINGCAUSESOFDEATH.csv|lineplot unisured Suicide.png|MEASURESOFBIRTHANDDEATH.csv|not sure yet.png|piechartcorrelationsuicide.png|piechartcorrelationsuicide2.png|piechartcorrelationsuicide3.png|plotviewALEmapHISTOGRAM.pdf|Poverty CHSI - Randall Taylor.pdf|PREVENTIVESERVICESUSE.csv|RELATIVEHEALTHIMPORTANCE.csv|RISKFACTORSANDACCESSTOCARE.csv|Rplot.png|Rplot01.pdf|smoker ~ suicide.png|Suicide Percentages - Per State Plot.png|Suicide to Unemployed.png|SUMMARYMEASURESOFHEALTH.csv|Toxic Chemicals and Suicide.png|VUNERABLEPOPSANDENVHEALTH.csv|white american suicide histogram.png|ySuicidexSmokerScatterPlot.png|ySuicidexToxicChemicals.png|new_chsi/import-chsi.R|new_chsi/Randall-import-chsi.R|new_chsi/the space.RData
